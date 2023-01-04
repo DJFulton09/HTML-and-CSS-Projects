@@ -1,0 +1,25 @@
+table {
+	border: 3px solid silver;
+}
+
+td:hover {
+	background-color: yellow;
+	color: blue;
+}
+
+tr, th {
+	background-color: red;
+	color: cornsilk;
+}
+
+tr, td {
+	background-color: darkgreen;
+	color: white;
+}
+
+h1 {
+	color: #DC143C;
+	background: #000000;
+	font-weight: bold;
+	text-align:center;
+}
