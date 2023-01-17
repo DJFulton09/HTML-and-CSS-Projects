@@ -20,7 +20,7 @@ h1{
     SELECT ALL SQUARES IN THE ARRAY
 -------------------------------------------*/
 .container .squares:nth-child(-n+4) {
-    background-image: url("../images/icons/smiley2.png");
+    background-image: url("./images/icons/smiley2.png");
     color: #fff;
     float: left;
     width: 100px;
@@ -46,7 +46,7 @@ h1{
 }
 
 /*-------------------------------------------------
-    INDIVIDUALLY SELECT A SQQUARE IN THE ARRAY
+    INDIVIDUALLY SELECT A SQUARE IN THE ARRAY
 --------------------------------------------------*/
 .squares:nth-child(1){
     background: #4240ff
@@ -67,18 +67,18 @@ h1{
 /*----------------------------------------------
     HOVER, TRANSLATE & TRANSFORM EFFECTS
 ----------------------------------------------*/
-.squares:nth-child(-n+4) :hover;{
-    background-image: url("../images/icons/smiley1.png");
+.container .squares:nth-child(-n+4):hover{
+    background-image: url("./images/icons/smiley.png");
 }
-.squares:nth-child(1) :hover{
+.squares:nth-child(1):hover{
     background: #13b4ff;
 }
-.squares:nth-child(2) :hover{
+.squares:nth-child(2):hover{
     background: #d861af;
 }
-.squares:nth-child(3) :hover{
+.squares:nth-child(3):hover{
     background: #81205f;
 }
-.squares:nth-child(4) :hover{
+.squares:nth-child(4):hover{
     background: #77b800;
 }
