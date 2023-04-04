@@ -8,7 +8,101 @@
 	</head>
 <!-- this section is about red pandas -->		
 		<body>
+			<h2>Sticky Element: Scroll Down to See the Effect</h2>
+			<p>Scroll down this page to see how  sticky positioning works.</p>
+			<div class="sticky">I will stick to the screen when you reach my scroll position</div>
+
+
 			<link rel= "stylesheet" type= "text/css" href= "Basic_CSS_2.css">
+			<script>
+				document.body.classList.add('fade-out');
+
+				window.addEventListener('DOMContentLoaded', () => {
+				document.body.classList.remove('fade-out');
+				});
+
+				function validateForm() {
+				let x = document.forms["myForm"]["fname"].value;
+				if (x == "") {
+					alert("Name must be filled out");
+					return false;
+				}
+				}
+			  
+				body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+			 
+			 </script>
+
+			
 		
 		
 		<h style="font-size:10vw;">&quot; RED PANDAS!!! &quot;</h>
@@ -19,6 +113,64 @@
 		
 		<img src="https://plantbasednews.org/app/uploads/2022/06/plant-based-news-red-panda-extinction.jpg">
 		
+		<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+			Phone Number: <input type="text" name="fname">
+			<input type="submit" value="Submit">
+		  </form>
+
+		  <div class="form-popup" id="myForm">
+			<form action="/action_page.php" class="form-container">
+			  <h1>Login</h1>
+		  
+			  <label for="email"><b>Email</b></label>
+			  <input type="text" placeholder="Enter Email" name="email" required>
+		  
+			  <label for="psw"><b>Password</b></label>
+			  <input type="password" placeholder="Enter Password" name="psw" required>
+		  
+			  <button type="submit" class="btn">Login</button>
+			  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+			</form>
+		  </div>
+		  
+		  <script>
+			function openForm() {
+			  document.getElementById("myForm").style.display = "block";
+			}
+			
+			function closeForm() {
+			  document.getElementById("myForm").style.display = "none";
+			}
+
+			
+			</script>
+			<a href="https://www.google.com/search?q=red+panda&rlz=1C1CHBF_enUS886US886&sxsrf=APwXEdeQU8UJ8KYA-kD-2iFVtT8k4D9mAA:1680629229457&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiS6-Hh35D-AhXbFzQIHQfJATAQ0pQJegQIBRAC&biw=2133&bih=1041&dpr=0.9" target="_blank">More Red Pandas!</a> 
 		
+			<h1>Smooth Scroll</h1>
+
+				<div class="main" id="section1">
+				<h2>Section 1</h2>
+				<p>Click on the link to see the "smooth" scrolling effect.</p>
+				<a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+				<p>Note: Remove the scroll-behavior property to remove smooth scrolling.</p>
+				</div>
+
+				<div class="main" id="section2">
+				<h2>Section 2</h2>
+				<a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+				</div>
+
+				<div id="slideshow">
+					<div>
+					  <img src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
+					</div>
+					<div>
+					  <img src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
+					</div>
+					<div>
+					  Pretty cool eh? This slide is proof the content can be anything.
+					</div>
+				  </div>
+
 		</body>
 </html>
